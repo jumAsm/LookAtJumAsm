@@ -1,0 +1,709 @@
+h1 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h3 {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', sans-serif;
+}
+
+p,
+a {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f6f4f0
+}
+
+
+/*========== MENU BAR ==========*/
+.navbar {
+    background-color: transparent !important;
+    padding: 20px 0;
+}
+
+.navbar-nav {
+    width: 100%;
+}
+
+.nav-link {
+    font-size: 1.1rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #2e292b !important;
+    transition: transform 0.3s ease, color 0.3s ease;
+    display: inline-block;
+}
+
+.collapsing {
+    transition: none !important;
+}
+
+/*========== HOME ==========*/
+#home {
+    position: relative;
+    background-image: url('images/hero.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 110vh;
+    display: block;
+    color: #f6f4f0;
+    text-align: center;
+}
+
+.hero-content {
+    height: 110vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.square-line {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    /* لتوزيع المربعات على كامل العرض */
+    z-index: 2;
+
+}
+
+.square-line span {
+    background-color: #f6f4f0 !important;
+    /* العرض الدقيق ليكون المربع مساوياً للفراغ تماماً */
+    width: 5vw;
+    height: 5vw;
+    /* لضمان بقائه مربعاً */
+    background-clip: padding-box;
+    margin-bottom: -1px;
+}
+
+.square-line span:nth-child(-n+3) {
+    background-color: #61263b !important;
+}
+
+.square-line span:nth-child(n+4) {
+    background-color: #f6f4f0 !important;
+}
+
+/*========== ABOUT ==========*/
+#about {
+    height: 50vh;
+    display: flex;
+    width: 100%;
+    margin-top: -1px;
+}
+
+.about-left {
+    position: relative;
+    width: 31.31vw;
+    background-color: #61263b !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.about-title {
+    color: #f6f4f0;
+    font-family: 'Trebuchet MS', sans-serif;
+    font-size: clamp(2rem, 5vw, 4rem);
+    letter-spacing: 10px;
+    font-weight: bold;
+}
+
+.about-right {
+    position: relative;
+    flex-grow: 1;
+    background-color: #f6f4f0 !important;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    padding: 3rem;
+
+}
+
+.about-name {
+    color: #61263b;
+    font-weight: bold;
+    border-bottom: 1.5px solid #61263b;
+    width: fit-content;
+    padding-bottom: 5px;
+    margin-bottom: 1.5rem;
+    font-family: 'Trebuchet MS', sans-serif;
+}
+
+.about-text {
+    line-height: 1.8;
+    color: #2e292b;
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin-bottom: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.rose-left {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: auto;
+}
+
+.rose-right {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 50px;
+    height: auto;
+}
+
+.rose-left-small {
+    display: none;
+    /* مخفية تماماً في الشاشات الكبيرة */
+}
+
+/*========== EDUCATION  ==========*/
+#education {
+    position: relative;
+    background-image: url('images/edu.svg');
+    background-size: cover;
+    background-position: center;
+    height: 80vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    margin-top: -1px;
+}
+
+.edu-frame-wrapper {
+    position: relative;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.edu-frame {
+    height: 110%;
+    width: auto;
+    margin-right: 20px;
+    pointer-events: none;
+}
+
+.edu-content {
+    position: absolute;
+    text-align: center;
+    z-index: 2;
+
+}
+
+.edu-header {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: bold;
+    margin-bottom: 2rem;
+    font-family: 'Trebuchet MS', sans-serif;
+    color: #61263b;
+}
+
+.edu-degree {
+    font-size: 1.6rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: #2e292b;
+}
+
+.edu-university {
+    font-size: 1.2rem;
+    margin-bottom: 0.2rem;
+    font-style: italic;
+    color: #2e292b;
+}
+
+.edu-years {
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #2e292b;
+}
+
+/*========== Projects ==========*/
+.projects-header {
+    background-color: #f6f4f0;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.projects-title {
+    color: #61263b;
+    font-size: clamp(2rem, 5vw, 4rem);
+    font-weight: bold;
+    font-family: 'Trebuchet MS', sans-serif;
+    margin-bottom: 0;
+}
+
+.projects-line {
+    height: 5vh;
+    background-color: #f6f4f0;
+    width: 100%;
+}
+
+.projects-main {
+    position: relative;
+    background-image: url('images/project.png');
+    background-size: cover;
+    background-position: center;
+    min-height: 260vh;
+    width: 100%;
+    margin-top: -1px;
+}
+
+.projects-main .square-line {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+}
+
+.projects-main .square-line span {
+    background-color: #f6f4f0 !important;
+    height: 4vw;
+}
+
+.projects-main .square-line.bottom {
+    top: auto;
+    bottom: 0;
+}
+
+.projects-main .bottom span {
+    background-color: #f6f4f0 !important;
+}
+
+/*cards*/
+.projects-container {
+    padding-top: 90px;
+    width: 100%;
+    margin: 0;
+}
+
+.project-pos {
+    height: 45vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+
+}
+
+.project-pos:nth-child(odd) {
+    justify-content: flex-start;
+}
+
+.project-pos:nth-child(even) {
+    justify-content: flex-end;
+}
+
+.custom-card {
+    background-image: url('images/card.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 900px;
+    height: 420px;
+    display: flex;
+    align-items: center;
+    filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.1));
+    z-index: 5;
+    gap: 30px;
+    justify-content: flex-start;
+    padding-left: 18px;
+}
+
+.project-icon-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-shrink: 0;
+}
+
+.bracket {
+    font-family: 'Trebuchet MS', sans-serif;
+    font-size: 4rem;
+    color: #2e292b;
+    font-weight: lighter;
+}
+
+.project-icon {
+    width: 90px;
+    height: auto;
+}
+
+.card-text h4 {
+    font-family: 'Trebuchet MS', sans-serif;
+    color: #61263b;
+    font-size: 2.5rem;
+    text-align: left;
+    font-style: italic;
+    text-decoration: underline;
+    margin-bottom: 10px;
+}
+
+.card-text p {
+    font-size: 1.2rem;
+    color: #333;
+    line-height: 2;
+    max-width: 500px;
+}
+
+.project-pos:nth-child(even) .custom-card {
+    transform: scaleX(-1);
+    justify-content: flex-start;
+    flex-direction: row-reverse;
+}
+
+.project-pos:nth-child(even) .card-text {
+    transform: scaleX(-1);
+
+}
+
+.project-pos:nth-child(even) .project-icon-wrapper {
+    transform: scaleX(-1);
+    padding-left: 55px;
+}
+
+
+.project-pos:nth-child(even) .card-text {
+    text-align: left;
+}
+
+/* الحفاظ على الكود الأساسي كما هو */
+#contact {
+    background-color: #f6f4f0;
+    margin-top: -1px;
+    min-height: 70vh;
+    position: relative;
+}
+
+.contact-header {
+    text-align: center;
+    padding: 60px 0;
+}
+
+.contact-title {
+    color: #61263b;
+    font-size: clamp(2rem, 5vw, 4rem);
+    font-weight: bold;
+    font-family: 'Trebuchet MS', sans-serif;
+    letter-spacing: 10px;
+}
+
+/* تنسيق المحتوى الجديد (أيقونات التواصل) */
+.contact-icons-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 65px;
+    /* مسافة بين الأيقونات في الشاشة الكبيرة */
+    padding-top: 50px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.contact-icon {
+    width: 100px;
+    height: auto;
+}
+
+.contact-item .bracket {
+    font-family: 'Trebuchet MS', sans-serif;
+    font-size: 4.2rem;
+    color: #332e30;
+    /* لون الأقواس الداكن من الصورة */
+    font-weight: lighter;
+    font-weight: lighter;
+}
+
+.contact-rose-left {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: auto;
+}
+
+.contact-rose-right {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 50px;
+    height: auto;
+}
+
+
+
+@media screen and (max-width: 992px) {
+    .navbar-collapse.show {
+        background-color: #f6f4f0;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        display: flex !important;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 1000;
+    }
+
+    .navbar-collapse:not(.show) {
+        display: none !important;
+    }
+
+    .nav-link {
+        font-size: 1.5rem !important;
+        color: #2e292b !important;
+        margin: 15px 0;
+    }
+
+    .navbar-toggler {
+        z-index: 1001;
+        border: none !important;
+        box-shadow: none !important;
+    }
+
+    .navbar-toggler-icon {
+        background-image: url('images/moreW.svg') !important;
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 35px;
+        height: 35px;
+    }
+
+    .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
+        background-image: url('images/more.svg') !important;
+
+    }
+
+    @media screen and (min-width: 992px) {
+        .nav-link:hover {
+            transform: scale(1.1);
+            color: #f6f4f0 !important;
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    .square-line span:nth-child(n+4) {
+        background-color: #61263b !important;
+    }
+
+    .square-line span:nth-child(n+6) {
+        display: none;
+    }
+
+    .square-line span {
+        background-color: #61263b !important;
+        width: 10.7vw;
+        height: 8vw;
+    }
+
+    #about {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .about-left,
+    .about-right {
+        height: 25vh;
+        width: 100% !important;
+        height: auto;
+        padding: 2rem 1rem;
+    }
+
+    .about-title {
+        transform: rotate(0deg);
+        letter-spacing: 2px;
+        font-size: 2rem;
+    }
+
+    .rose-left {
+        display: none;
+    }
+
+    .rose-left-small {
+        display: block;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 30px;
+        height: auto;
+    }
+
+    .rose-right {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 30px;
+    }
+
+    #education {
+        height: 60vh;
+    }
+
+    .edu-frame {
+        height: 100%;
+    }
+
+    .edu-header {
+        letter-spacing: 5px;
+        font-size: 1.8rem;
+    }
+
+    .edu-degree {
+        font-size: 1.2rem;
+    }
+
+    .projects-title {
+        letter-spacing: 5px;
+        font-size: 2.5rem;
+    }
+
+    .projects-main .square-line span {
+        width: 10.7vw;
+        height: 8vw;
+        background-color: #f6f4f0 !important;
+    }
+
+    .projects-main .square-line span:nth-child(n+6) {
+        display: none;
+    }
+
+    .projects-main {
+        min-height: auto;
+        padding-bottom: 50px;
+    }
+
+    .project-pos {
+        height: auto;
+    }
+
+    .custom-card {
+        width: 92% !important;
+        height: auto !important;
+        padding: 45px !important;
+        gap: 13px !important;
+        background-size: 100% 100% !important;
+        align-items: center;
+        filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.1));
+        z-index: 5;
+        justify-content: flex-start;
+    }
+
+    .project-icon-wrapper {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        flex-shrink: 0;
+    }
+
+    .project-icon {
+        width: 45px !important;
+    }
+
+    .bracket {
+        font-size: 1.7rem !important;
+    }
+
+    .card-text h4 {
+        font-size: 1.2rem !important;
+        margin-bottom: 5px;
+    }
+
+    .card-text p {
+        font-size: 1rem !important;
+        line-height: 1 !important;
+        font-weight: 200 !important;
+        max-width: 100% !important;
+    }
+
+    .project-pos:nth-child(odd) .custom-card {
+        margin-left: -25px;
+
+    }
+
+    .project-pos:nth-child(even) .custom-card {
+        margin-right: -25px;
+    }
+
+    .project-pos:nth-child(even) .project-icon-wrapper {
+        padding-left: 0px !important;
+    }
+
+    #contact {
+        min-height: 60vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .contact-header {
+        padding: 30px 0 0 0 !important;
+    }
+
+    .contact-main {
+        padding-bottom: 50px !important;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .contact-icons-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+        width: 100%;
+    }
+
+    .contact-icon {
+        width: 60px;
+
+    }
+
+    .contact-item .bracket {
+        font-size: 3rem;
+    }
+
+    .contact-rose-right,
+    .contact-rose-left {
+        width: 30px;
+        height: auto;
+    }
+
+
+}
