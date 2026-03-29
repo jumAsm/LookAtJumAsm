@@ -810,8 +810,8 @@ h1.name {
 }
 @media screen and (max-width: 1200px) {
     .projects-main {
-        background-image: none !important; /* حذف صورة التلال */
-        background-color:#853c50 !important; /* تفعيل اللون الوردي */
+        background-image: none !important;
+        background-color:#853c50 !important; 
     }
     .project-pos {
         height: auto !important; 
