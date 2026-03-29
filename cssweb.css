@@ -768,58 +768,6 @@ h1.name {
         height: auto;
     }
 
-    .custom-card {
-        width: 92% !important;
-        height: auto !important;
-        padding: 45px !important;
-        gap: 13px !important;
-        background-size: 100% 100% !important;
-        align-items: center;
-        filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.1));
-        z-index: 5;
-        justify-content: flex-start;
-    }
-
-    .project-icon-wrapper {
-        display: flex;
-        align-items: center;
-        gap: 5px;
-        flex-shrink: 0;
-    }
-
-    .project-icon {
-        width: 45px !important;
-    }
-
-    .bracket {
-        font-size: 1.3rem !important;
-    }
-
-    .card-text h3 {
-        font-size: 1.2rem !important;
-        margin-bottom: 5px;
-    }
-
-    .card-text p {
-        font-size: 1rem !important;
-        line-height: 1 !important;
-        font-weight: 400 !important;
-        max-width: 100% !important;
-    }
-
-    .project-pos:nth-child(odd) .custom-card {
-        margin-left: -25px;
-
-    }
-
-    .project-pos:nth-child(even) .custom-card {
-        margin-right: -25px;
-    }
-
-    .project-pos:nth-child(even) .project-icon-wrapper {
-        padding-left: 0px !important;
-    }
-
     #contact {
         min-height: 60vh;
         display: flex;
@@ -860,60 +808,58 @@ h1.name {
     }
 
 }
-
-@media screen and (min-width: 577px) and (max-width: 850px) {
-
-     h1.name {
-        font-size: 6rem !important;
-
-    }
-    .projects-main .square-line span {
-        background-color: #f6f4f0 !important;
-    }
-
-    .projects-container {
-        padding-left: 0 !important;
-        padding-right: 0 !important;
-        overflow-x: hidden;
+@media screen and (max-width: 1200px) {
+    .project-pos {
+        height: auto !important; 
+        padding: 40px 0 !important;
+        display: flex;
+        align-items: center;
     }
 
     .custom-card {
-        width: 100% !important;
+        background-image: none !important;
+        background-color: #f6f4f0 !important;
+        width: 95% !important;
         height: auto !important;
-        background-size: 100% 100% !important;
-        padding: 50px !important;
-        margin-bottom: 30px;
+        min-height: 200px; 
+        padding: 30px !important;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        border: 1px dashed #dcdcdc;
+        position: relative;
+        margin-bottom: 20px; 
     }
-
     .project-pos:nth-child(odd) .custom-card {
-        margin-left: -50px !important;
-        justify-content: center;
+        margin-left: -30px !important;
+        border-left: 10px solid #853c50 !important;
+        border-radius: 0 5px 5px 0;
     }
 
     .project-pos:nth-child(even) .custom-card {
-
-        margin-right: -50px !important;
-        justify-content: flex-start;
+        margin-right: -30px !important;
+        border-right: 10px solid #853c50 !important;
+        border-radius: 5px 0 0 5px;
+        flex-direction: row;
+        transform: none !important;
     }
-
+.project-pos:nth-child(even) .card-text,
+    .project-pos:nth-child(even) .project-icon-wrapper {
+        transform: none !important;
+        padding-left: 0 !important;
+        text-align: left !important;
+    }
     .project-icon {
-        width: 50px !important;
-    }
-
-    .bracket {
-        font-size: 2rem !important;
+        width: 65px !important;
     }
 
     .card-text h3 {
-        font-size: 1.5rem;
-        margin-bottom: 1rem;
-        margin-bottom: 5px;
+        font-size: 1.6rem !important;
     }
-
     .card-text p {
-        font-size: 1.2rem;
-        line-height: 1.2;
-        max-width: 400px;
-
+        font-size: 1rem !important;
+        line-height: 1.5 !important;
+        margin-top: 10px;
     }
 }
