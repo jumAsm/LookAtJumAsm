@@ -1,14 +1,27 @@
-h1 {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+h1,
+.about-title,
+.edu-header,
+.projects-title,
+.contact-title {
+    font-family: 'Twinkle Star', cursive !important;
+    font-weight: normal;
+    text-transform: none;
 }
 
-h3 {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', sans-serif;
+h2.hero-subtitle {
+    font-family: 'Marmelad', sans-serif !important;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    color: #f6f4f0; 
+    font-weight: normal;
 }
 
-p,
-a {
-    font-family: Arial, Helvetica, sans-serif;
+p {
+    font-family: 'Mukta', sans-serif !important;
+    font-size: 1.1rem;
+    line-height: 1;
+    color: #414141;
+    font-weight: 400;
 }
 
 body {
@@ -17,11 +30,17 @@ body {
     background-color: #f6f4f0
 }
 
+h1.name {
+    font-size: 9rem;
+    letter-spacing: 2px;
+    color: #f6f4f0;
+}
 
 /*========== MENU BAR ==========*/
 .navbar {
     background-color: transparent !important;
     padding: 20px 0;
+    transition: background-color 0.4s ease, padding 0.4s ease;
 }
 
 .navbar-nav {
@@ -29,16 +48,36 @@ body {
 }
 
 .nav-link {
+    font-family: 'Marmelad', sans-serif !important;
     font-size: 1.1rem;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
     text-transform: uppercase;
-    color: #2e292b !important;
+    color: #414141 !important;
     transition: transform 0.3s ease, color 0.3s ease;
     display: inline-block;
 }
 
 .collapsing {
     transition: none !important;
+}
+
+.navbar.navbar-scrolled {
+    background-color: #853c50 !important;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+}
+
+.navbar.navbar-scrolled .nav-link {
+    color: #f6f4f0 !important;
+}
+
+.nav-link:hover {
+    color: #f6f4f0 !important;
+    transform: scale(1.1);
+}
+
+.navbar.navbar-scrolled .nav-link:hover {
+    color: #b2bf7b !important;
 }
 
 /*========== HOME ==========*/
@@ -68,23 +107,21 @@ body {
     width: 100%;
     display: flex;
     justify-content: space-between;
-    /* لتوزيع المربعات على كامل العرض */
     z-index: 2;
 
 }
 
 .square-line span {
     background-color: #f6f4f0 !important;
-    /* العرض الدقيق ليكون المربع مساوياً للفراغ تماماً */
     width: 5vw;
     height: 5vw;
-    /* لضمان بقائه مربعاً */
+
     background-clip: padding-box;
     margin-bottom: -1px;
 }
 
 .square-line span:nth-child(-n+3) {
-    background-color: #61263b !important;
+    background-color: #853c50 !important;
 }
 
 .square-line span:nth-child(n+4) {
@@ -99,10 +136,10 @@ body {
     margin-top: -1px;
 }
 
-.about-left {
+.about-main {
     position: relative;
     width: 31.31vw;
-    background-color: #61263b !important;
+    background-color: #853c50 !important;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -111,40 +148,51 @@ body {
 
 .about-title {
     color: #f6f4f0;
-    font-family: 'Trebuchet MS', sans-serif;
-    font-size: clamp(2rem, 5vw, 4rem);
-    letter-spacing: 10px;
-    font-weight: bold;
+    font-family: 'Twinkle Star', cursive !important;
+    font-size: 5rem;
+    letter-spacing: 5px;
+    font-weight: 700;
+    text-align: center;
+    line-height: 1.2;
+    display: flex;
+    flex-direction: column;
 }
 
-.about-right {
+.about-title span {
+    display: block;
+}
+
+.about-content {
     position: relative;
     flex-grow: 1;
     background-color: #f6f4f0 !important;
-    align-items: center;
+    display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: flex-start;
     padding: 3rem;
-
+    text-align: left;
 }
 
 .about-name {
-    color: #61263b;
+    font-family: 'Marmelad', sans-serif !important;
+    font-size: 1.8rem;
+    color: #853c50;
     font-weight: bold;
-    border-bottom: 1.5px solid #61263b;
+    border-bottom: 1.5px solid #853c50;
     width: fit-content;
-    padding-bottom: 5px;
-    margin-bottom: 1.5rem;
-    font-family: 'Trebuchet MS', sans-serif;
+    padding-bottom: 8px;
+    margin-bottom: 2rem;
+    text-align: left;
 }
 
 .about-text {
-    line-height: 1.8;
-    color: #2e292b;
-    font-size: 1.2rem;
-    max-width: 800px;
+    font-family: 'Mukta', sans-serif !important;
+    font-size: clamp(1rem, 3vw, 1.4rem);
+    line-height: 1.4;
+    color: #414141;
+    max-width: 850px;
     margin-bottom: 1rem;
-    font-family: Arial, Helvetica, sans-serif;
 }
 
 .rose-left {
@@ -165,7 +213,6 @@ body {
 
 .rose-left-small {
     display: none;
-    /* مخفية تماماً في الشاشات الكبيرة */
 }
 
 /*========== EDUCATION  ==========*/
@@ -195,7 +242,6 @@ body {
     height: 110%;
     width: auto;
     margin-right: 20px;
-    pointer-events: none;
 }
 
 .edu-content {
@@ -205,32 +251,39 @@ body {
 
 }
 
-.edu-header {
-    font-size: clamp(2rem, 5vw, 3.5rem);
-    font-weight: bold;
-    margin-bottom: 2rem;
-    font-family: 'Trebuchet MS', sans-serif;
-    color: #61263b;
+.edu-title {
+    font-size: 5rem;
+    font-weight: 700;
+    letter-spacing: 5px;
+    margin-bottom: 1.5rem;
+    font-family: 'Twinkle Star', sans-serif !important;
+    color: #853c50;
 }
 
 .edu-degree {
+    font-family: 'Marmelad', sans-serif !important;
     font-size: 1.6rem;
-    font-weight: bold;
+    font-weight: 700;
     margin-bottom: 0.5rem;
-    color: #2e292b;
+    color: #414141;
 }
 
 .edu-university {
-    font-size: 1.2rem;
-    margin-bottom: 0.2rem;
+    font-family: 'Mukta', sans-serif !important;
+    font-size: 1.5rem;
+    line-height: 1.4;
+    color: #414141;
+    max-width: 850px;
+    margin-bottom: 0.5rem;
     font-style: italic;
-    color: #2e292b;
+
 }
 
 .edu-years {
+    font-family: 'Mukta', sans-serif !important;
+    font-size: 1.3rem;
     font-weight: bold;
-    font-size: 1.1rem;
-    color: #2e292b;
+    color: #414141;
 }
 
 /*========== Projects ==========*/
@@ -241,11 +294,11 @@ body {
 }
 
 .projects-title {
-    color: #61263b;
-    font-size: clamp(2rem, 5vw, 4rem);
-    font-weight: bold;
+    font-size: 5rem;
+    font-weight: 700;
+    letter-spacing: 5px;
+    color: #853c50;
     font-family: 'Trebuchet MS', sans-serif;
-    margin-bottom: 0;
 }
 
 .projects-line {
@@ -291,6 +344,8 @@ body {
     padding-top: 90px;
     width: 100%;
     margin: 0;
+    position: relative;
+    z-index: 20;
 }
 
 .project-pos {
@@ -329,14 +384,14 @@ body {
 .project-icon-wrapper {
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 10px;
     flex-shrink: 0;
 }
 
 .bracket {
     font-family: 'Trebuchet MS', sans-serif;
-    font-size: 4rem;
-    color: #2e292b;
+    font-size: 2.5rem;
+    color: #414141;
     font-weight: lighter;
 }
 
@@ -345,21 +400,40 @@ body {
     height: auto;
 }
 
-.card-text h4 {
-    font-family: 'Trebuchet MS', sans-serif;
-    color: #61263b;
-    font-size: 2.5rem;
+.card-text h3 {
     text-align: left;
     font-style: italic;
-    text-decoration: underline;
     margin-bottom: 10px;
+    font-family: 'Marmelad', sans-serif !important;
+    font-size: 2rem;
+    color: #853c50;
+    font-weight: 500;
+}
+
+.card-text h3 a {
+    color: #853c50;
+    text-decoration: underline;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.card-text h3 a:hover {
+    color: #b2bf7b !important;
+    text-decoration: none !important;
+    transform: translateX(10px);
+}
+
+.card-text h3 a:visited {
+    color: #853c50;
 }
 
 .card-text p {
-    font-size: 1.2rem;
-    color: #333;
-    line-height: 2;
-    max-width: 500px;
+    font-family: 'Mukta', sans-serif !important;
+    font-size: 1.4rem;
+    line-height: 1.4;
+    color: #414141;
+    max-width: 600px;
+    margin-bottom: 1rem;
 }
 
 .project-pos:nth-child(even) .custom-card {
@@ -383,11 +457,12 @@ body {
     text-align: left;
 }
 
-/* الحفاظ على الكود الأساسي كما هو */
+
+/*========== Contact ==========*/
 #contact {
     background-color: #f6f4f0;
     margin-top: -1px;
-    min-height: 70vh;
+    height: 70vh;
     position: relative;
 }
 
@@ -397,20 +472,18 @@ body {
 }
 
 .contact-title {
-    color: #61263b;
-    font-size: clamp(2rem, 5vw, 4rem);
-    font-weight: bold;
+    font-size: clamp(3rem, 7vw, 5rem);
+    font-weight: 700;
+    letter-spacing: 5px;
+    color: #853c50;
     font-family: 'Trebuchet MS', sans-serif;
-    letter-spacing: 10px;
 }
 
-/* تنسيق المحتوى الجديد (أيقونات التواصل) */
 .contact-icons-container {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 65px;
-    /* مسافة بين الأيقونات في الشاشة الكبيرة */
     padding-top: 50px;
 }
 
@@ -421,16 +494,14 @@ body {
 }
 
 .contact-icon {
-    width: 100px;
+    width: 90px;
     height: auto;
 }
 
 .contact-item .bracket {
     font-family: 'Trebuchet MS', sans-serif;
-    font-size: 4.2rem;
-    color: #332e30;
-    /* لون الأقواس الداكن من الصورة */
-    font-weight: lighter;
+    font-size: 2.8rem;
+    color: #414141;
     font-weight: lighter;
 }
 
@@ -450,9 +521,21 @@ body {
     height: auto;
 }
 
+.contact-item a {
+    display: inline-block;
+    transition: all 0.3s ease;
+}
 
+.contact-item a:hover {
+    transform: translateY(-10px);
+}
 
-@media screen and (max-width: 992px) {
+.contact-item:hover .bracket {
+    color: #853c50;
+    transition: color 0.3s ease;
+}
+
+@media screen and (max-width: 980px) {
     .navbar-collapse.show {
         background-color: #f6f4f0;
         position: fixed;
@@ -473,7 +556,7 @@ body {
 
     .nav-link {
         font-size: 1.5rem !important;
-        color: #2e292b !important;
+        color: #414141 !important;
         margin: 15px 0;
     }
 
@@ -496,31 +579,104 @@ body {
 
     }
 
-    @media screen and (min-width: 992px) {
-        .nav-link:hover {
-            transform: scale(1.1);
-            color: #f6f4f0 !important;
-        }
+    .nav-link:hover {
+        color: #b2bf7b !important;
+        transform: scale(1.05);
+    }
+
+    .navbar-collapse.show .nav-link {
+        color: #414141 !important;
+    }
+
+    .nav-link:hover {
+        transform: scale(1.1);
+        color: #f6f4f0 !important;
     }
 }
 
 @media screen and (max-width: 768px) {
-    h1 {
-        font-size: 1.8rem;
+
+    .square-line span:nth-child(n+4) {
+        background-color: #853c50 !important;
     }
+
+    .about-title,
+    .edu-title,
+    .projects-title {
+        font-size: 3rem !important;
+    }
+
+    #about {
+        height: auto !important;
+        flex-direction: column;
+    }
+
+    .about-main {
+        width: 100% !important;
+        height: 20vh;
+    }
+
+    .about-content {
+        width: 100% !important;
+        padding: 2rem !important;
+    }
+
+    .about-title span {
+        display: inline !important;
+    }
+
+    .about-title {
+        flex-direction: row !important;
+        justify-content: center;
+        gap: 15px;
+        font-size: 2.5rem;
+    }
+
+    .about-name {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .about-text {
+        font-size: 1.3rem;
+        line-height: 1.2;
+    }
+
+    .rose-left,
+    .rose-right {
+        display: none;
+    }
+
+    .edu-frame {
+        transform: scale(1.15)
+    }
+
+    .contact-rose-left,
+    .contact-rose-right {
+        width: 40px !important;
+    }
+
+    .contact-icon {
+        width: 70px;
+    }
+
 }
 
 @media screen and (max-width: 576px) {
-    h1 {
-        font-size: 1.5rem;
+
+    h1.name {
+        font-size: 5rem !important;
+
     }
 
-    p {
-        font-size: 14px;
+    .about-title,
+    .edu-title,
+    .projects-title {
+        font-size: 3rem !important;
     }
 
     .square-line span:nth-child(n+4) {
-        background-color: #61263b !important;
+        background-color: #853c50 !important;
     }
 
     .square-line span:nth-child(n+6) {
@@ -528,48 +684,50 @@ body {
     }
 
     .square-line span {
-        background-color: #61263b !important;
+        background-color: #853c50 !important;
         width: 10.7vw;
         height: 8vw;
     }
 
     #about {
+        height: auto !important;
         flex-direction: column;
-        height: auto;
     }
 
-    .about-left,
-    .about-right {
-        height: 25vh;
+    .about-main {
         width: 100% !important;
-        height: auto;
-        padding: 2rem 1rem;
+        height: 20vh;
+    }
+
+    .about-content {
+        width: 100% !important;
+        padding: 2rem !important;
     }
 
     .about-title {
-        transform: rotate(0deg);
-        letter-spacing: 2px;
-        font-size: 2rem;
+        flex-direction: row !important;
+        justify-content: center;
+        gap: 15px;
+        font-size: 2.5rem;
     }
 
-    .rose-left {
-        display: none;
+    .about-name {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
     }
 
-    .rose-left-small {
-        display: block;
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 30px;
-        height: auto;
+    .about-text {
+        font-size: 1.3rem;
+        line-height: 1.2;
     }
 
+    .about-title span {
+        display: inline !important;
+    }
+
+    .rose-left,
     .rose-right {
-        position: absolute;
-        bottom: 0;
-        right: 0;
-        width: 30px;
+        display: none;
     }
 
     #education {
@@ -580,18 +738,15 @@ body {
         height: 100%;
     }
 
-    .edu-header {
-        letter-spacing: 5px;
-        font-size: 1.8rem;
-    }
 
-    .edu-degree {
+    .edu-university {
         font-size: 1.2rem;
+
     }
 
-    .projects-title {
-        letter-spacing: 5px;
-        font-size: 2.5rem;
+    .edu-degree,
+    .edu-years {
+        font-size: 1rem;
     }
 
     .projects-main .square-line span {
@@ -606,7 +761,7 @@ body {
 
     .projects-main {
         min-height: auto;
-        padding-bottom: 50px;
+        padding-bottom: 70px;
     }
 
     .project-pos {
@@ -637,10 +792,10 @@ body {
     }
 
     .bracket {
-        font-size: 1.7rem !important;
+        font-size: 1.3rem !important;
     }
 
-    .card-text h4 {
+    .card-text h3 {
         font-size: 1.2rem !important;
         margin-bottom: 5px;
     }
@@ -648,7 +803,7 @@ body {
     .card-text p {
         font-size: 1rem !important;
         line-height: 1 !important;
-        font-weight: 200 !important;
+        font-weight: 400 !important;
         max-width: 100% !important;
     }
 
@@ -694,9 +849,8 @@ body {
         width: 60px;
 
     }
-
     .contact-item .bracket {
-        font-size: 3rem;
+        font-size: 2rem !important;
     }
 
     .contact-rose-right,
@@ -705,5 +859,61 @@ body {
         height: auto;
     }
 
+}
 
+@media screen and (min-width: 577px) and (max-width: 850px) {
+
+     h1.name {
+        font-size: 6rem !important;
+
+    }
+    .projects-main .square-line span {
+        background-color: #f6f4f0 !important;
+    }
+
+    .projects-container {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+        overflow-x: hidden;
+    }
+
+    .custom-card {
+        width: 100% !important;
+        height: auto !important;
+        background-size: 100% 100% !important;
+        padding: 50px !important;
+        margin-bottom: 30px;
+    }
+
+    .project-pos:nth-child(odd) .custom-card {
+        margin-left: -50px !important;
+        justify-content: center;
+    }
+
+    .project-pos:nth-child(even) .custom-card {
+
+        margin-right: -50px !important;
+        justify-content: flex-start;
+    }
+
+    .project-icon {
+        width: 50px !important;
+    }
+
+    .bracket {
+        font-size: 2rem !important;
+    }
+
+    .card-text h3 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+        margin-bottom: 5px;
+    }
+
+    .card-text p {
+        font-size: 1.2rem;
+        line-height: 1.2;
+        max-width: 400px;
+
+    }
 }
