@@ -735,7 +735,7 @@ h1.name {
     }
 
     .edu-frame {
-        height: 100%;
+        height: 90%;
     }
 
 
@@ -809,6 +809,10 @@ h1.name {
 
 }
 @media screen and (max-width: 1200px) {
+    .projects-main {
+        background-image: none !important; /* حذف صورة التلال */
+        background-color:#853c50 !important; /* تفعيل اللون الوردي */
+    }
     .project-pos {
         height: auto !important; 
         padding: 40px 0 !important;
