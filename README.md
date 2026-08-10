@@ -1,4 +1,4 @@
-# LookAtJumAsm – Personal Resume Website 
+## <img src="images/LAJIcon.png" alt="LookAtJumAsm Icon" width="20"/> LookAtJumAsm – Personal Resume Website
 
 **LookAtJumAsm** is a responsive personal resume/portfolio website built with HTML, CSS, and Bootstrap 5, developed as a Web Development course assignment at the University of Jeddah.
 
