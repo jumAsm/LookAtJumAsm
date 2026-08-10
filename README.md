@@ -16,7 +16,7 @@ With the site, visitors can:
 ---
 
 ### UI Preview
-![LookAtJumAsm Website Preview]("C:\Users\joman\Downloads\LookAtJumAsmFull.png")
+![LookAtJumAsm Website Preview]("LookAtJumAsmFull.png")
 
 ---
 
